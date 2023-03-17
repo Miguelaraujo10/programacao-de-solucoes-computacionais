@@ -1,28 +1,45 @@
-package projetocursoads;
+package pratica01;
 
-import java.util.Scanner;
 
-public class CalculaMediaNotas {
+    public class Equacao {
+	 private double a ;
+	 private double b ;
+	 private double c ;
+	 private double delta ;
+	 private double x1 ;
+	 private double x2;  
+	
+    
+  
+	
+//	EXEMPLO COM PARAMETROS PORÉM NAO REFERENCIA O ATRIBUTO 
+//	public double calculaDelta (double a, double b, double c) {
+//		
+//		delta = (Math.pow(b, 2)) - 4* a *c;
+//		return  delta;
+//	}
+	 
+     public double calculaDelta () {
+		
+		this.delta = (Math.pow(this.b, 2)) - 4* this.a *this.c;
+		return  delta;
+	}
+     
+     
+	public double calculaX1(double x1) {
+		
+		x1 = (-b + Math.sqrt(delta) /   ( 2 * a ) );
+		
+		return x1;
+		 
+	}
+	
+	public double calculaX2(double x2) {
+		
+		x1 = (-b - Math.sqrt(delta) /   ( 2 * a ) );
+		
+		return x2;
+   
+	}
 
-    public static void main(String[]args ) {
-    	Scanner teclado = new Scanner (System.in);
-    	
-    	 
-    	System.out.print ("Coloque a sua primeira nota : ");
-        float n1 = teclado.nextFloat();
-       
-       System.out.println("Coloque a sua segunda nota: ");
-       float n2 = teclado.nextFloat();
-      
-       float m = ( n1 + n2 ) / 2 ;
-       
-       System.out.println("Seu resultado foi : " + m  );
-       
-       if  ( m > 9 ); 
-    	   System.out.println("Parábens voc6e conseguiu uma média para entrar em Harvard");
-       
-       if ( m < 4   )
-    	   System.out.println("Você infelizmente não passou de ano");
-    	   
-    }
 }
