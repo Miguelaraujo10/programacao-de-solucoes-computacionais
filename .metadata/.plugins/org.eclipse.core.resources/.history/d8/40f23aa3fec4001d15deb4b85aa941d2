@@ -1,0 +1,9 @@
+package projetocursoads;
+
+public class CalculaMediaNotas {
+
+	private void sysout("Digite a primeira nota") {
+	
+    Scanner input = new Scanner(System.in)
+	}
+}
